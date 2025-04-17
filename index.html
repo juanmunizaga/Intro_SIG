@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorio de Teledetección Ambiental</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <a href="sobre.html" class="boton-flotante">¿De qué trata este sitio?</a>
+  <header class="titulo-principal">
+    <h1>Laboratorio de Teledetección Ambiental</h1>
+  </header>
+
+  <div class="contenedor">
+    <!-- Bloque 1 -->
+    <section class="bloque">
+      <h2>Proyección y Corte de información espacial</h2>
+      <p>A continuación, se realizan los principales procedimientos para el manejo de información espacial. 
+        Estos procedimientos permiten verificar el sistema de referencia espacial y transformar hacia otro 
+        sistema de referencia como pueden ser cambios entre coordenadas geográficas y coordenadas proyectadas,
+        este procedimiento es llamado "Proyectar".
+
+        Por otro lado, el procedimiento "Clip", permite cortar información espacial entre vectores. 
+        De manera que podemos ajustar la información a un área específica que se quiera trabajar.
+      </p>
+      
+      <div class="videos-dobles">
+        <!-- ArcGIS -->
+        <div class="video-contenedor">
+          <iframe src="https://www.youtube.com/embed/k__D7H-Q7EQ" frameborder="0" allowfullscreen></iframe>
+          <div class="etiqueta">
+            <img src="img/arcgis-logo.png" alt="ArcGIS Logo" class="logo-etiqueta"> ArcGIS Pro
+          </div>
+        </div>
+    
+        <!-- QGIS -->
+        <div class="video-contenedor">
+          <iframe src="https://www.youtube.com/embed/v6a5IMf1hWc" frameborder="0" allowfullscreen></iframe>
+          <div class="etiqueta">
+            <img src="img/qgis-logo.png" alt="QGIS Logo" class="logo-etiqueta"> QGIS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloque 2 -->
+    <section class="bloque">
+      <h2>Proyectar y Cortar información</h2>
+      <p>Aprende cómo proyectar datos geográficos y realizar cortes según áreas de interés utilizando ArcGIS Pro o QGIS.</p>
+          <div class="videos-dobles">
+            <!-- ArcGIS -->
+            <div class="video-contenedor">
+              <iframe src="https://www.youtube.com/embed/k__D7H-Q7EQ" frameborder="0" allowfullscreen></iframe>
+              <div class="etiqueta">
+                <img src="img/arcgis-logo.png" alt="ArcGIS Logo" class="logo-etiqueta"> ArcGIS Pro
+              </div>
+            </div>
+        
+            <!-- QGIS -->
+            <div class="video-contenedor">
+              <iframe src="https://www.youtube.com/embed/v6a5IMf1hWc" frameborder="0" allowfullscreen></iframe>
+              <div class="etiqueta">
+                <img src="img/qgis-logo.png" alt="QGIS Logo" class="logo-etiqueta"> QGIS
+              </div>
+            </div>
+          </div>
+        </section>
+
+  <script>
+    function cambiarVideo(baseId, plataforma) {
+      const arcgis = document.getElementById(`${baseId}-arcgis`);
+      const qgis = document.getElementById(`${baseId}-qgis`);
+
+      if (plataforma === 'arcgis') {
+        arcgis.classList.add('video-activo');
+        arcgis.classList.remove('video-inactivo');
+        qgis.classList.add('video-inactivo');
+        qgis.classList.remove('video-activo');
+      } else {
+        arcgis.classList.add('video-inactivo');
+        arcgis.classList.remove('video-activo');
+        qgis.classList.add('video-activo');
+        qgis.classList.remove('video-inactivo');
+      }
+    }
+  </script>
+</body>
+</html>
